@@ -1,10 +1,11 @@
 <template>
-  <div class="font">
+  <div class="font relative">
     <Header />
     <div class="container mx-auto">
       <Nuxt />
     </div>
     <Footer />
+    <ModalWindow />
   </div>
 </template>
 

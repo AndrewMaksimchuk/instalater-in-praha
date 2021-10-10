@@ -3,6 +3,7 @@
     <h2
       class="text-center text-2xl pb-3 font-bold text-gray-700"
       id="section-jobss"
+      tabindex="0"
     >
       {{ headerText }}
     </h2>

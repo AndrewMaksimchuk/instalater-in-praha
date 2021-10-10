@@ -5,6 +5,7 @@
   >
     <ul class="h-full flex flex-col gap-4 pt-8">
       <MenuItem
+        tabindex="0"
         v-for="{ text, link } in menu"
         :key="link"
         :text="text"
@@ -12,8 +13,8 @@
         @changeViewMenuToggle="press"
       />
     </ul>
-    <section class="flex flex-col gap-4 pb-14">
-      <a class="social__link flex items-center" href="/">
+    <section class="flex flex-col gap-4 pb-28">
+      <a class="social__link flex items-center" href="/" tabindex="0">
         <img
           class="w-11 h-auto"
           src="~/assets/images/icons/instagram.png"
@@ -21,7 +22,7 @@
         />
         <span class="pl-1.5 text-3xl">Instagram</span>
       </a>
-      <a class="social__link flex items-center" href="/">
+      <a class="social__link flex items-center" href="/" tabindex="0">
         <img
           class="w-11 h-auto"
           src="~/assets/images/icons/facebook.svg"
@@ -70,7 +71,6 @@ export default Vue.extend({
   },
   methods: {
     press(state: boolean) {
-      console.log("OLOLOLOL");
       this.$emit("changeViewMenuToggle", state);
     }
   }

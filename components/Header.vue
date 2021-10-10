@@ -5,6 +5,7 @@
     >
       <a
         class="phone text-lg h-full flex items-center hover:underline"
+        role="button"
         :href="`tel:${phoneNumber}`"
       >
         <img
@@ -56,6 +57,9 @@ export default Vue.extend({
 </script>
 
 <style scoped>
+.header {
+  z-index: 100;
+}
 .phone:hover .call-icon {
   transform: rotate(30deg);
 }
