@@ -79,6 +79,6 @@ export default Vue.extend({
 
 <style scoped>
 .menu-toggle {
-  min-height: calc(100vh - 44px);
+  height: 100vh;
 }
 </style>

@@ -25,7 +25,7 @@
           class="border-b-2 p-2 rounded-md"
           type="tel"
           inputmode="tel"
-          pattern="\d{7,}"
+          pattern="\d{10,}"
           id="phone-number"
           :placeholder="phoneNumberPlaceholder"
           required
