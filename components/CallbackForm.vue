@@ -12,6 +12,7 @@
         <input
           class="border-b-2 p-2 rounded-md"
           type="text"
+          inputmode="text"
           id="name"
           :placeholder="namePlaceholder"
           required
@@ -22,9 +23,9 @@
         >
         <input
           class="border-b-2 p-2 rounded-md"
-          type="text"
-          inputmode="numeric"
-          pattern="[0-9]*"
+          type="tel"
+          inputmode="tel"
+          pattern="\d{7,}"
           id="phone-number"
           :placeholder="phoneNumberPlaceholder"
           required

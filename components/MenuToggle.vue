@@ -12,7 +12,7 @@
         @changeViewMenuToggle="press"
       />
     </ul>
-    <section class="flex flex-col gap-4 pb-11">
+    <section class="flex flex-col gap-4 pb-14">
       <a class="social__link flex items-center" href="/">
         <img
           class="w-11 h-auto"
