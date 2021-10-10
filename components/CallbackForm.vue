@@ -1,22 +1,27 @@
 <template>
   <section class="callback-form px-4 py-14" id="callback">
     <div class="mx-auto sm:max-w-sm">
-      <h2 class="text-center text-2xl pb-3" id="section-jobss">
+      <h2
+        class="text-center text-2xl pb-3 font-bold text-gray-700"
+        id="section-jobss"
+      >
         {{ headerText }}!
       </h2>
       <form class="p-4 px-6 flex flex-col gap-2 border rounded-md bg-white">
-        <label class="mt-10" for="name">{{ name }}:</label>
+        <label class="mt-10 text-gray-700" for="name">{{ name }}:</label>
         <input
-          class="border-b-2 p-2"
+          class="border-b-2 p-2 rounded-md"
           type="text"
           id="name"
           :placeholder="namePlaceholder"
           required
         />
 
-        <label class="mt-10" for="phone-number">{{ phoneNumber }}:</label>
+        <label class="mt-10 text-gray-700" for="phone-number"
+          >{{ phoneNumber }}:</label
+        >
         <input
-          class="border-b-2 p-2"
+          class="border-b-2 p-2 rounded-md"
           type="text"
           inputmode="numeric"
           pattern="[0-9]*"

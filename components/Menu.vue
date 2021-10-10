@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden lg:flex h-full">
+  <div class="hidden lg:flex h-full items-center">
     <ul class="h-full flex gap-4">
       <MenuItem
         v-for="{ text, link } in menu"
@@ -9,7 +9,7 @@
       />
     </ul>
     <img
-      class="w-11 h-auto ml-8"
+      class="w-11 h-11 h-auto ml-8"
       src="~/assets/images/icons/logo.white.png"
       alt="company logo"
       aria-hidden="true"

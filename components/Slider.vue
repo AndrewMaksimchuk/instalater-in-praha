@@ -4,8 +4,10 @@
       :text="'Опалення'"
       :imgSrc="'hero-slider-heizung-raustauschwochen_0.jpeg'"
     />
-    <h2 class="absolute bottom-48 w-full text-center">
-      <span class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase">
+    <h2 class="absolute bottom-48 w-full text-center font-bold">
+      <span
+        class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-xl"
+      >
         {{ header }}
       </span>
     </h2>
@@ -45,7 +47,7 @@ export default Vue.extend({
 
 <style scoped>
 .slider {
-  height: calc(100vh - 44px);
+  height: calc(100vh - 56px);
   z-index: -1;
 }
 </style>

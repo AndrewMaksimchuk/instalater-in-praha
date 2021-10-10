@@ -1,6 +1,9 @@
 <template>
   <section class="gallery px-4 pt-14">
-    <h2 class="text-center text-2xl pb-3" id="section-jobss">
+    <h2
+      class="text-center text-2xl pb-3 font-bold text-gray-700"
+      id="section-jobss"
+    >
       {{ headerText }}
     </h2>
     <div class="mt-6 h-auto flex flex-wrap justify-evenly gap-4">
@@ -12,10 +15,10 @@
         :imgSrc="item"
       />
     </div>
-    <p class="text-center pt-4">
+    <p class="text-center pt-4 text-gray-700">
       {{ toFullGallery }}
     </p>
-    <p class="text-center">
+    <p class="text-center text-gray-700">
       <a class="underline" href="/gallery">{{ linkToGallery }}</a>
     </p>
   </section>

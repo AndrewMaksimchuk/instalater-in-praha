@@ -1,7 +1,7 @@
 <template>
   <header class="header sticky sm:static top-0 bg-blue-500">
     <div
-      class="container mx-auto h-11 text-white flex flex-nowrap justify-between items-center px-4"
+      class="container mx-auto h-14 text-white flex flex-nowrap justify-between items-center px-4"
     >
       <a
         class="phone text-lg h-full flex items-center hover:underline"

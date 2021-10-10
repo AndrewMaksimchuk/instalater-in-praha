@@ -1,6 +1,9 @@
 <template>
   <main>
-    <h2 class="text-center text-2xl py-6" id="section-jobss">
+    <h2
+      class="text-center text-2xl py-6 font-bold text-gray-700"
+      id="section-jobss"
+    >
       {{ headerText }}
     </h2>
     <section class="h-auto flex flex-wrap justify-evenly gap-4">

@@ -3,8 +3,10 @@
     class="list-of-jobs px-4 pt-14 overflow-hidden md:overflow-auto"
     id="job-list"
   >
-    <h2 class="text-center text-2xl pb-3">{{ headerText }}</h2>
-    <ul class="job-list pl-4 pb-4">
+    <h2 class="text-center text-2xl pb-3 font-bold text-gray-700">
+      {{ headerText }}
+    </h2>
+    <ul class="job-list pl-4 pb-4 text-gray-700">
       <li class="jobs-item flex" v-for="item in jobsList" :key="item">
         <span class="job-text pl-1.5">
           {{ item }}
@@ -123,11 +125,13 @@ export default Vue.extend({
 .job-list {
   height: 60vh;
   column-count: 1;
+  overflow-y: hidden;
 }
 @media screen and (min-width: 768px) {
   .job-list {
     column-count: 2;
     height: auto;
+    overflow-y: visible;
   }
 }
 @media screen and (min-width: 1024px) {

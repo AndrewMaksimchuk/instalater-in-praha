@@ -1,6 +1,6 @@
 <template>
   <div
-    class="menu-toggle p-4 absolute left-0 top-11 w-full bg-black flex flex-col justify-between"
+    class="menu-toggle p-4 absolute left-0 top-14 w-full bg-gray-900 flex flex-col justify-between text-gray-50"
     :class="{ hidden: !isShow }"
   >
     <ul class="h-full flex flex-col gap-4 pt-8">
@@ -12,7 +12,7 @@
         @changeViewMenuToggle="press"
       />
     </ul>
-    <section class="flex flex-col gap-4">
+    <section class="flex flex-col gap-4 pb-11">
       <a class="social__link flex items-center" href="/">
         <img
           class="w-11 h-auto"

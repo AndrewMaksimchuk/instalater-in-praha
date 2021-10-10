@@ -1,6 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
-  <footer class="footer bg-black p-4" id="footer">
+  <footer class="footer bg-gray-900 p-4" id="footer">
     <div class="container mx-auto h-full text-white flex flex-col gap-8">
       <div>
         <ul class="flex flex-col lg:flex-row gap-4">

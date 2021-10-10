@@ -6,7 +6,9 @@
       :alt="text"
     />
     <figcaption class="absolute bottom-36 w-full text-center">
-      <span class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase">
+      <span
+        class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-lg"
+      >
         {{ text }}
       </span>
     </figcaption>
