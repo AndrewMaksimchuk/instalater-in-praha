@@ -1,5 +1,5 @@
 <template>
-  <header class="header sticky sm:static top-0 bg-blue-500">
+  <header class="header sticky sm:static top-0 bg-blue-500" v-if="isShowHeader">
     <div
       class="container mx-auto h-14 text-white flex flex-nowrap justify-between items-center px-4"
     >
@@ -32,6 +32,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   data() {
@@ -42,6 +43,7 @@ export default Vue.extend({
     };
   },
   computed: {
+    ...mapGetters(["isShowHeader"]),
     formatedPhoneNumber(): string {
       // +38(093)-470-54-18
       return this.phoneNumber;

@@ -4,7 +4,7 @@
     v-if="isShowModalWindow"
   >
     <button
-      class="absolute top-11 right-11 text-white uppercase tracking-wider"
+      class="close-button absolute top-11 right-11 text-white uppercase tracking-wider"
       type="button"
       @click="hideModalWindow"
     >
