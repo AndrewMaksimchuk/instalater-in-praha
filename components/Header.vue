@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky sm:static top-0 bg-blue-500">
+  <header class="header sticky sm:static top-0 bg-blue-500">
     <div
       class="container mx-auto h-11 text-white flex flex-nowrap justify-between items-center px-4"
     >
@@ -14,7 +14,17 @@
         />
         {{ formatedPhoneNumber }}
       </a>
-      <nav class="nav"></nav>
+      <nav class="nav h-full flex align-center gap-1">
+        <Menu />
+        <MenuToggle
+          :isShow="isShowMenuToggle"
+          @changeViewMenuToggle="changeViewMenuToggle"
+        />
+        <ButtonMenu
+          :buttonState="buttonState"
+          @changeViewMenuToggle="changeViewMenuToggle"
+        />
+      </nav>
     </div>
   </header>
 </template>
@@ -25,13 +35,21 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      phoneNumber: "+380934705418"
+      phoneNumber: "+380934705418",
+      isShowMenuToggle: false,
+      buttonState: false
     };
   },
   computed: {
     formatedPhoneNumber(): string {
       // +38(093)-470-54-18
       return this.phoneNumber;
+    }
+  },
+  methods: {
+    changeViewMenuToggle(state: boolean) {
+      this.isShowMenuToggle = state;
+      this.buttonState = state;
     }
   }
 });
@@ -43,11 +61,6 @@ export default Vue.extend({
 }
 .call-icon {
   --size: 24px;
-  width: var(--size);
-  height: var(--size);
-}
-.nav {
-  --size: 44px;
   width: var(--size);
   height: var(--size);
 }
