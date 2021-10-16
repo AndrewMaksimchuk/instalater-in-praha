@@ -5,7 +5,7 @@
       id="section-jobss"
       tabindex="0"
     >
-      {{ headerText }}
+      {{ $t("gallery_header_text") }}
     </h2>
     <div class="mt-6 h-auto flex flex-wrap justify-evenly gap-4">
       <GalleryCard
@@ -17,34 +17,23 @@
       />
     </div>
     <p class="text-center pt-4 text-gray-700">
-      {{ toFullGallery }}
+      {{ $t("gallery_description") }}
     </p>
     <p class="text-center text-gray-700">
-      <a class="underline" href="/gallery">{{ linkToGallery }}</a>
+      <a class="underline" href="/gallery">{{ $t("gallery_link_to_full") }}</a>
     </p>
   </section>
 </template>
 
 <script lang="ts">
+import data from "../data.json";
 import Vue from "vue";
+
 export default Vue.extend({
   data() {
     return {
       indexTriger: 4,
-      headerText: "Галерея выполненных работ",
-      toFullGallery: "Хотите увидить больше?",
-      linkToGallery: "Посмотрите все примеры здесь",
-      jobPhotos: [
-        "photo_2021-10-10_00-11-04.jpg",
-        "photo_2021-09-26_15-31-26.jpg",
-        "photo_2021-10-10_00-11-07.jpg",
-        "photo_2021-09-26_15-31-27.jpg",
-        "photo_2021-09-26_15-31-28.jpg",
-        "photo_2021-09-26_15-31-29.jpg",
-        "photo_2021-09-26_15-31-32.jpg",
-        "photo_2021-09-26_15-31-31.jpg",
-        "photo_2021-09-26_15-31-33.jpg"
-      ]
+      jobPhotos: data.gallery_preview_photos
     };
   }
 });

@@ -6,15 +6,20 @@
     <ul class="h-full flex flex-col gap-4 pt-8">
       <MenuItem
         tabindex="0"
-        v-for="{ text, link } in menu"
-        :key="link"
-        :text="text"
-        :link="link"
+        v-for="(item, index) in menu"
+        :key="index"
+        :index="index"
+        :link="item"
         @changeViewMenuToggle="press"
       />
     </ul>
     <section class="flex flex-col gap-4 pb-28">
-      <a class="social__link flex items-center" href="/" tabindex="0">
+      <LangSelected />
+      <a
+        class="social__link flex items-center"
+        :href="linkInstagram"
+        tabindex="0"
+      >
         <img
           class="w-11 h-auto"
           src="~/assets/images/icons/instagram.png"
@@ -22,7 +27,11 @@
         />
         <span class="pl-1.5 text-3xl">Instagram</span>
       </a>
-      <a class="social__link flex items-center" href="/" tabindex="0">
+      <a
+        class="social__link flex items-center"
+        :href="linkFacebook"
+        tabindex="0"
+      >
         <img
           class="w-11 h-auto"
           src="~/assets/images/icons/facebook.svg"
@@ -35,6 +44,7 @@
 </template>
 
 <script lang="ts">
+import data from "../data.json";
 import Vue from "vue";
 export default Vue.extend({
   props: {
@@ -45,28 +55,9 @@ export default Vue.extend({
   },
   data() {
     return {
-      menu: [
-        {
-          text: "На головну",
-          link: "/"
-        },
-        {
-          text: "Список послуг",
-          link: "#job-list"
-        },
-        {
-          text: "Галерея робіт",
-          link: "gallery"
-        },
-        {
-          text: "Зворотній звязок",
-          link: "#callback"
-        },
-        {
-          text: "Контакти",
-          link: "#footer"
-        }
-      ]
+      menu: data.menu_links,
+      linkFacebook: data.contact_facebook,
+      linkInstagram: data.contact_instagram
     };
   },
   methods: {

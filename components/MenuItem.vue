@@ -1,7 +1,7 @@
 <template>
   <li class="flex items-center text-2xl lg:text-base">
     <a class="hover:underline" :href="link" @click="press">
-      {{ text }}
+      {{ $t(`menu[${index}]`) }}
     </a>
   </li>
 </template>
@@ -11,8 +11,8 @@ import Vue from "vue";
 
 export default Vue.extend({
   props: {
-    text: {
-      type: String,
+    index: {
+      type: Number,
       required: true
     },
     link: {
@@ -22,7 +22,6 @@ export default Vue.extend({
   },
   methods: {
     press() {
-      console.log("OLOLOLOL");
       this.$emit("changeViewMenuToggle", false);
     }
   }

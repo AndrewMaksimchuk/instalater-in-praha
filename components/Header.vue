@@ -31,13 +31,14 @@
 </template>
 
 <script lang="ts">
+import data from "../data.json";
 import Vue from "vue";
 import { mapGetters } from "vuex";
 
 export default Vue.extend({
   data() {
     return {
-      phoneNumber: "+380934705418",
+      phoneNumber: data.contact_phone_number,
       isShowMenuToggle: false,
       buttonState: false
     };
@@ -45,14 +46,17 @@ export default Vue.extend({
   computed: {
     ...mapGetters(["isShowHeader"]),
     formatedPhoneNumber(): string {
-      // +38(093)-470-54-18
-      return this.phoneNumber;
+      return this.phoneNumber.split("").reduce(this.formatNumber, "");
     }
   },
   methods: {
     changeViewMenuToggle(state: boolean) {
       this.isShowMenuToggle = state;
       this.buttonState = state;
+    },
+    formatNumber(word: string, letter: string, index: number) {
+      if (index % 3) return word + letter;
+      return word + (letter + " ");
     }
   }
 });

@@ -1,45 +1,29 @@
 <template>
-  <section class="relative slider bg-gray-200">
+  <section class="relative slider bg-gray-200 overflow-hidden">
     <Slide
-      :text="'Опалення'"
-      :imgSrc="'hero-slider-heizung-raustauschwochen_0.jpeg'"
+      v-for="(item, index) in content"
+      :key="index"
+      :index="index"
+      :imgSrc="item"
     />
     <h2 class="absolute bottom-48 w-full text-center font-bold">
       <span
         class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-xl"
       >
-        {{ header }}
+        {{ $t("slider_header") }}
       </span>
     </h2>
   </section>
 </template>
 
 <script lang="ts">
+import data from "../data.json";
 import Vue from "vue";
-
-interface slider {
-  text: string;
-  imgSrc: string;
-}
 
 export default Vue.extend({
   data() {
     return {
-      header: "Сантехнічні роботи",
-      text: Array<slider>(
-        {
-          text: "Вода",
-          imgSrc: ""
-        },
-        {
-          text: "Каналізація",
-          imgSrc: ""
-        },
-        {
-          text: "Опалення",
-          imgSrc: "photo_2021-10-10_00-11-00.jpg"
-        }
-      )
+      content: data.slider_photos
     };
   }
 });

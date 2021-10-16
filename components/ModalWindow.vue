@@ -4,15 +4,15 @@
     v-if="isShowModalWindow"
   >
     <button
-      class="close-button absolute top-11 right-11 text-white uppercase tracking-wider"
+      class="close-button absolute top-11 right-11 text-white uppercase tracking-wider border-white border rounded-lg p-2"
       type="button"
       @click="hideModalWindow"
     >
-      {{ buttonText }}
+      {{ $t("modal_window_close_button") }}
     </button>
     <img
-      class="rounded-md w-4/5 h-4/6 object-cover"
-      :src="`images/${imgInModal}`"
+      class="w-4/5 h-4/6 object-cover xl:object-contain"
+      :src="`images/gallery/${imgInModal}`"
       alt=""
     />
   </div>
@@ -23,11 +23,6 @@ import Vue from "vue";
 import { mapGetters, mapMutations } from "vuex";
 
 export default Vue.extend({
-  data() {
-    return {
-      buttonText: "Закрить"
-    };
-  },
   computed: {
     ...mapGetters(["isShowModalWindow", "imgInModal"])
   },

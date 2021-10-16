@@ -1,3 +1,5 @@
 <template>
-  <section class="contacts"></section>
+  <section class="contacts">
+    <h2></h2>
+  </section>
 </template>

@@ -1,33 +1,36 @@
 <template>
   <section class="callback-form px-4 py-14" id="callback">
-    <div class="mx-auto sm:max-w-sm">
+    <div class="mx-auto sm:max-w-lg">
       <h2
+        v-if="isHeaderShow"
         class="text-center text-2xl pb-3 font-bold text-gray-700"
         tabindex="0"
       >
-        {{ headerText }}!
+        {{ $t("callback_from_header_text") }}!
       </h2>
       <form class="p-4 px-6 flex flex-col gap-2 border rounded-md bg-white">
-        <label class="mt-10 text-gray-700" for="name">{{ name }}:</label>
+        <label class="input-label mt-10 text-gray-700" for="name"
+          >{{ $t("callback_from_name") }}:</label
+        >
         <input
-          class="border-b-2 p-2 rounded-md"
+          class="w-full p-2 rounded-md tracking-wide border-b-2 rounded-b-none"
           type="text"
           inputmode="text"
           id="name"
-          :placeholder="namePlaceholder"
+          :placeholder="$t('callback_from_name_placeholder')"
           required
         />
 
-        <label class="mt-10 text-gray-700" for="phone-number"
-          >{{ phoneNumber }}:</label
+        <label class="input-label mt-10 text-gray-700" for="phone-number"
+          >{{ $t("callback_from_phone_number") }}:</label
         >
         <input
-          class="border-b-2 p-2 rounded-md"
+          class="w-full p-2 rounded-md tracking-wide border-b-2 rounded-b-none"
           type="tel"
           inputmode="tel"
           pattern="\d{10,}"
           id="phone-number"
-          :placeholder="phoneNumberPlaceholder"
+          :placeholder="$t('callback_from_phone_number_placeholder')"
           required
         />
 
@@ -35,7 +38,7 @@
           class="bg-blue-500 text-white uppercase p-2 mt-10 tracking-wide border rounded-md hover:underline"
           type="submit"
         >
-          {{ button }}
+          {{ $t("callback_from_button") }}
         </button>
       </form>
     </div>
@@ -46,15 +49,30 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  props: {
+    isHeaderShow: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
-      headerText: "Мы вам перезвоним",
-      name: "Укажите ваше имья",
-      phoneNumber: "Укажите ваш номер телефона",
-      button: "Отправить",
-      namePlaceholder: "Andrew Maksimchuk",
-      phoneNumberPlaceholder: "+380934705418"
+      // headerText: "Мы вам перезвоним",
+      // name: "Укажите ваше имья",
+      // phoneNumber: "Укажите ваш номер телефона",
+      // button: "Отправить",
+      // namePlaceholder: "Andrew Maksimchuk",
+      // phoneNumberPlaceholder: "+380934705418"
     };
   }
 });
 </script>
+
+<style scoped>
+.input-label::before {
+  content: "*";
+  color: #ff0000;
+  padding-right: 4px;
+  font-size: 0.6rem;
+}
+</style>

@@ -4,7 +4,7 @@
       class="text-center text-2xl py-6 font-bold text-gray-700"
       id="section-jobss"
     >
-      {{ headerText }}
+      {{ $t("gallery_header_text") }}
     </h2>
     <section class="h-auto flex flex-wrap justify-evenly gap-4">
       <GalleryCard />
@@ -32,11 +32,5 @@
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({
-  data() {
-    return {
-      headerText: "Галерея выполненных работ"
-    };
-  }
-});
+export default Vue.extend({});
 </script>

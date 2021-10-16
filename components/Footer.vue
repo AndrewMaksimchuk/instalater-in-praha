@@ -5,16 +5,20 @@
       <div>
         <ul class="flex flex-col lg:flex-row gap-4">
           <MenuItem
-            v-for="{ text, link } in menu"
-            :key="link"
-            :text="text"
-            :link="link"
+            v-for="(item, index) in menu"
+            :key="index"
+            :index="index"
+            :link="item"
           />
         </ul>
       </div>
       <div class="flex flex-wrap justify-between gap-8">
         <section class="social flex flex-wrap gap-4">
-          <a class="social__link flex items-center hover:underline " href="/">
+          <a
+            class="social__link flex items-center hover:underline"
+            :href="linkInstagram"
+            target="_blank"
+          >
             <img
               class="social__icon w-11 h-auto"
               src="~/assets/images/icons/instagram.png"
@@ -22,7 +26,11 @@
             />
             <span class="pl-1.5 text-3xl">Instagram</span>
           </a>
-          <a class="social__link flex items-center hover:underline " href="/">
+          <a
+            class="social__link flex items-center hover:underline"
+            :href="linkFacebook"
+            target="_blank"
+          >
             <img
               class="social__icon w-11 h-auto"
               src="~/assets/images/icons/facebook.svg"
@@ -31,14 +39,14 @@
             <span class="pl-1.5 text-3xl">Facebook</span>
           </a>
         </section>
-        <a class="flex gap-4 hover:underline" href="/">
+        <a class="flex gap-4 hover:underline" :href="linkMainPage">
           <span class="text-3xl">
-            Installater in Praha
+            {{ name }}
           </span>
           <img
             class="w-11 h-auto"
             src="~/assets/images/icons/logo.white.png"
-            alt=""
+            alt="Company logo"
           />
         </a>
       </div>
@@ -47,33 +55,17 @@
 </template>
 
 <script lang="ts">
+import data from "../data.json";
 import Vue from "vue";
 
 export default Vue.extend({
   data() {
     return {
-      menu: [
-        {
-          text: "Головна сторінка",
-          link: "/"
-        },
-        {
-          text: "Список послуг",
-          link: "#job-list"
-        },
-        {
-          text: "Галерея робіт",
-          link: "gallery"
-        },
-        {
-          text: "Зворотній звязок",
-          link: "#callback"
-        },
-        {
-          text: "Контакти",
-          link: "#footer"
-        }
-      ]
+      name: data.company_name,
+      menu: data.menu_links,
+      linkFacebook: data.contact_facebook,
+      linkInstagram: data.contact_instagram,
+      linkMainPage: data.site_url
     };
   }
 });

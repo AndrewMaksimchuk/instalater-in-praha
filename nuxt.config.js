@@ -1,14 +1,14 @@
 export default {
   target: "static",
   router: {
-    base: '/instalater-in-praha/'
+    base: "/instalater-in-praha/"
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Instalater in praha",
-    htmlAttrs: {
-      lang: "uk"
-    },
+    // htmlAttrs: {
+    //   lang: "uk"
+    // },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -19,9 +19,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    './assets/fonts/fonts.css'
-  ],
+  css: ["./assets/fonts/fonts.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -37,7 +35,22 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/i18n"],
+
+  i18n: {
+    // locales: ["ru", "en", "cz"],
+    locales: [
+      { code: "cs", iso: "cs", file: "cs.js", dir: "ltr", name: "Česky" },
+      { code: "en", iso: "en", file: "en.js", dir: "ltr", name: "English" },
+      { code: "ru", iso: "ru", file: "ru.js", dir: "ltr", name: "Русский" }
+    ],
+    defaultLocale: "ru",
+    strategy: "prefix_except_default",
+    langDir: "locales/",
+    vueI18n: {
+      fallbackLocale: "cz",
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
