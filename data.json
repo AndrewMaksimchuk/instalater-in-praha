@@ -1,11 +1,12 @@
 {
   "site_url": "/",
+  "base_url": "instalater-in-praha.cz",
   "company_name": "Installater in Praha",
-  "contact_phone_number": "+380934705418",
+  "contact_phone_number": "+420774868158",
   "contact_email": "prahainstalater@gmail.com",
   "contact_facebook": "https://www.facebook.com/profile.php?id=100072290172147",
   "contact_instagram": "https://www.instagram.com/prahainstalater/",
-  "menu_links": ["/", "#job-list", "gallery", "#callback", "#footer"],
+  "menu_links": ["#job-list", "gallery", "#callback", "#footer"],
   "slider_photos": [
     "photo_2021-10-10_00-11-00.jpg",
     "photo_2021-10-10_00-11-00.jpg",

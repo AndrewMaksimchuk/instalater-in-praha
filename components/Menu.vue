@@ -9,12 +9,13 @@
       />
     </ul>
     <LangSelected />
-    <img
-      class="w-11 h-auto ml-8"
-      src="~/assets/images/icons/logo.white.png"
-      alt="Company logo"
-      aria-hidden="true"
-    />
+    <a href="/">
+      <img
+        class="w-11 h-auto ml-8"
+        src="~/assets/images/icons/logo.white.png"
+        alt="Company logo"
+        aria-hidden="true"
+    /></a>
   </div>
 </template>
 

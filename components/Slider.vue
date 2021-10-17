@@ -6,13 +6,13 @@
       :index="index"
       :imgSrc="item"
     />
-    <h2 class="absolute bottom-48 w-full text-center font-bold">
+    <h1 class="absolute bottom-48 w-full text-center font-bold">
       <span
         class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-xl"
       >
         {{ $t("slider_header") }}
       </span>
-    </h2>
+    </h1>
   </section>
 </template>
 

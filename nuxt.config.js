@@ -1,21 +1,58 @@
+import data from './data.json'
+
 export default {
   target: "static",
   router: {
     base: "/instalater-in-praha/"
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: "Instalater in praha",
-    // htmlAttrs: {
-    //   lang: "uk"
-    // },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" }
-    ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true });
+    return {
+      title: this.$t("title"),
+      htmlAttrs: {
+        ...i18nHead.htmlAttrs
+      },
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "description",
+          name: "description",
+          content: this.$t("description")
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.$t("keywords")
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.$t("description")
+        },
+        {
+          hid: "og:type",
+          property: "og:type",
+          content: "website"
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.$t("title")
+        },
+        {
+          hid: "theme-color",
+          name: "theme-color",
+          content: "#ffffff"
+        },
+        ...i18nHead.meta
+      ],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        ...i18nHead.link
+      ]
+    };
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -35,20 +72,24 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxt/http"],
+
+  http: {
+    // proxyHeaders: false
+  },
 
   i18n: {
-    // locales: ["ru", "en", "cz"],
+    baseUrl: data.base_url,
     locales: [
-      { code: "cs", iso: "cs", file: "cs.js", dir: "ltr", name: "Česky" },
-      { code: "en", iso: "en", file: "en.js", dir: "ltr", name: "English" },
-      { code: "ru", iso: "ru", file: "ru.js", dir: "ltr", name: "Русский" }
+      { code: "cs", iso: "cs-CZ", file: "cs.js", dir: "ltr", name: "Česky" },
+      { code: "en", iso: "en-US", file: "en.js", dir: "ltr", name: "English" },
+      { code: "ru", iso: "ru-RU", file: "ru.js", dir: "ltr", name: "Русский" }
     ],
-    defaultLocale: "ru",
+    defaultLocale: "cs",
     strategy: "prefix_except_default",
     langDir: "locales/",
     vueI18n: {
-      fallbackLocale: "cz",
+      fallbackLocale: "cs"
     }
   },
 

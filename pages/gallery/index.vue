@@ -32,5 +32,16 @@
 
 <script lang="ts">
 import Vue from "vue";
-export default Vue.extend({});
+
+export default Vue.extend({
+  data() {
+    return {
+      images: []
+    };
+  },
+  async created() {
+    const res = await this.$http.$get("https://unpkg.com/nuxt/package.json");
+    this.images = await res.json();
+  }
+});
 </script>

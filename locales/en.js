@@ -1,11 +1,9 @@
 export default {
-  menu: [
-    "Home",
-    "List of services",
-    "Gallery of works",
-    "Feedback",
-    "Contacts"
-  ],
+  title: "Plumbing works in Prague",
+  description: "Professional plumbers Prague, All types of plumbing work 24/7",
+  keywords:
+    "Plumbing works, installation, repair of heating, plumbing, sewage cleaning, replacement, installation of plumbing parts, boiler, radiators, turnkey bathrooms, reasonable prices, excellent quality, good service, 24/7",
+  menu: ["List of services", "Gallery of works", "Feedback", "Contacts"],
   slider_header: "Plumbing work",
   slider: ["Water", "Sewerage", "Heating"],
   jobs_header_text: "Our services",
@@ -107,5 +105,5 @@ export default {
   callback_from_button: "Send",
   callback_from_name_placeholder: "Andrew Maksimchuk",
   callback_from_phone_number_placeholder: "+380934705418",
-  modal_window_close_button: "Close",
+  modal_window_close_button: "Close"
 };

@@ -6,11 +6,11 @@
       :alt="$t(`slider[${index}]`)"
     />
     <figcaption class="absolute bottom-36 w-full text-center">
-      <span
+      <strong
         class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-lg"
       >
         {{ $t(`slider[${index}]`) }}
-      </span>
+      </strong>
     </figcaption>
   </figure>
 </template>
