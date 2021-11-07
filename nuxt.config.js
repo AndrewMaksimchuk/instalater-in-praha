@@ -3,7 +3,7 @@ import data from "./data.json";
 export default {
   target: "static",
   router: {
-    base: "/instalater-in-praha/",
+    // base: "/instalater-in-praha/",
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {

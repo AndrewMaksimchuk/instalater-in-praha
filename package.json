@@ -11,11 +11,12 @@
     "gpd": "yarn generate && yarn deploy",
     "prepare": "husky install",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "yarn-clear": "yarn cache clean"
   },
   "dependencies": {
     "@nuxt/http": "^0.6.4",
-    "@nuxtjs/i18n": "^7.0.3",
+    "@nuxtjs/i18n": "7.0.3",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "push-dir": "^0.4.1"

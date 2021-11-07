@@ -23,7 +23,6 @@ export default Vue.extend({
     };
   },
   async created() {
-    //@ts-ignore
     // TODO: make request to get all list of all images
     // const res = await this.$http.get("https://unpkg.com/nuxt/package.json");
     // this.images = await res.json();
