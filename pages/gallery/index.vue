@@ -7,7 +7,11 @@
       {{ $t("gallery_header_text") }}
     </h2>
     <section class="h-auto flex flex-wrap justify-evenly gap-4">
-      <GalleryCard />
+      <GalleryCard
+        v-for="(image, index) in images"
+        :key="index"
+        :imgSrc="image.name"
+      />
     </section>
     <CallbackForm />
   </main>
@@ -23,9 +27,9 @@ export default Vue.extend({
     };
   },
   async created() {
-    // TODO: make request to get all list of all images
-    // const res = await this.$http.get("https://unpkg.com/nuxt/package.json");
-    // this.images = await res.json();
+    const url = `${window.location.origin}/api/images/gallery/`;
+    const res = await this.$http.get(url);
+    this.images = await res.json();
   },
 });
 </script>

@@ -81,9 +81,9 @@ export default {
   i18n: {
     baseUrl: data.base_url,
     locales: [
-      { code: "cs", iso: "cs-CZ", file: "cs.js", dir: "ltr", name: "Česky" },
       { code: "en", iso: "en-US", file: "en.js", dir: "ltr", name: "English" },
       { code: "ru", iso: "ru-RU", file: "ru.js", dir: "ltr", name: "Русский" },
+      { code: "cs", iso: "cs-CZ", file: "cs.js", dir: "ltr", name: "Česky" },
     ],
     defaultLocale: "cs",
     strategy: "prefix_except_default",

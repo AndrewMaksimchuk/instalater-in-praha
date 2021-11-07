@@ -1,8 +1,8 @@
 <template>
   <li class="flex items-center text-2xl lg:text-base">
-    <a class="hover:underline" :href="link" @click="press">
-      {{ $t(`menu[${index}]`) }}
-    </a>
+    <nuxt-link :to="localePath(link)" class="hover:underline" @click="press">{{
+      $t(`menu[${index}]`)
+    }}</nuxt-link>
   </li>
 </template>
 

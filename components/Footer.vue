@@ -12,7 +12,7 @@
           />
         </ul>
       </div>
-      <div class="flex flex-wrap justify-between gap-8">
+      <div class="flex flex-wrap justify-between gap-8 pt-16">
         <section class="social flex flex-wrap gap-4">
           <a
             class="social__link flex items-center hover:underline"
