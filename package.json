@@ -8,7 +8,11 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "gpd": "yarn generate && yarn deploy"
+    "gpd": "yarn generate && yarn deploy",
+    "prepare": "husky install",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+
   },
   "dependencies": {
     "@nuxt/http": "^0.6.4",
@@ -20,6 +24,8 @@
   "devDependencies": {
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/tailwindcss": "^4.2.1"
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "husky": "^7.0.0",
+    "prettier": "^2.4.1"
   }
 }
