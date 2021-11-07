@@ -2,7 +2,7 @@
   <figure class="slide w-full h-full absolute top-0 left-0">
     <img
       class="w-full h-full object-cover"
-      :src="`images/slider/${imgSrc}`"
+      :src="`images/gallery/${imgSrc}`"
       :alt="$t(`slider[${index}]`)"
     />
     <figcaption class="absolute bottom-36 w-full text-center">
