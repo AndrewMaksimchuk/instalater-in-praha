@@ -4,7 +4,7 @@ export default {
     "Profesionální Instalatéři Praha, Všechny druhy instalatérských prací 24/7",
   keywords:
     "Instalatérské práce, instalace, opravy topení, instalatérské práce, čištění odpadních vod, výměna, instalace instalatérských dílů, bojlerů, radiátorů, koupelen na klíč, rozumné ceny, vynikající kvalita, dobré služby, 24/7",
-  menu: ["Seznam služeb", "Galerie děl", "Zpětná vazba", "Kontakty"],
+  menu: ["Domov", "Seznam služeb", "Galerie děl", "Zpětná vazba", "Kontakty"],
   slider_header: "Instalatérské práce",
   slider: ["Vodah", "Kanalizace", "Topení"],
   jobs_header_text: "Naše služby",

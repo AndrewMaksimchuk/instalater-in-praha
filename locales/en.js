@@ -3,7 +3,13 @@ export default {
   description: "Professional plumbers Prague, All types of plumbing work 24/7",
   keywords:
     "Plumbing works, installation, repair of heating, plumbing, sewage cleaning, replacement, installation of plumbing parts, boiler, radiators, turnkey bathrooms, reasonable prices, excellent quality, good service, 24/7",
-  menu: ["List of services", "Gallery of works", "Feedback", "Contacts"],
+  menu: [
+    "Main",
+    "List of services",
+    "Gallery of works",
+    "Feedback",
+    "Contacts",
+  ],
   slider_header: "Plumbing work",
   slider: ["Water", "Sewerage", "Heating"],
   jobs_header_text: "Our services",
