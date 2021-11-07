@@ -94,7 +94,7 @@ export default {
     "Instalace vany",
     "Plynové vytápění doma",
     "Instalace instalace záchodové mísy",
-    "Kontrolní hodnoty vodoměrů"
+    "Kontrolní hodnoty vodoměrů",
   ],
   jobs_comment: "A mnohem víc...",
   gallery_header_text: "Galerie dokončených prací",
@@ -106,5 +106,5 @@ export default {
   callback_from_button: "Poslat",
   callback_from_name_placeholder: "Andrew Maksimchuk",
   callback_from_phone_number_placeholder: "+380934705418",
-  modal_window_close_button: "Zavřít"
+  modal_window_close_button: "Zavřít",
 };

@@ -17,14 +17,14 @@ export default Vue.extend({
   props: {
     buttonState: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     press() {
       this.$emit("changeViewMenuToggle", !this.buttonState);
-    }
-  }
+    },
+  },
 });
 </script>
 

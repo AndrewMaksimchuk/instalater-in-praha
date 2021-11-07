@@ -8,7 +8,16 @@
     />
     <h1 class="absolute bottom-48 w-full text-center font-bold">
       <span
-        class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-xl"
+        class="
+          bg-blue-500
+          text-white
+          rounded-md
+          px-4
+          py-2
+          uppercase
+          tracking-wider
+          text-xl
+        "
       >
         {{ $t("slider_header") }}
       </span>
@@ -23,9 +32,9 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      content: data.slider_photos
+      content: data.slider_photos,
     };
-  }
+  },
 });
 </script>
 

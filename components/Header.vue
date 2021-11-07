@@ -1,7 +1,16 @@
 <template>
   <header class="header sticky sm:static top-0 bg-blue-500" v-if="isShowHeader">
     <div
-      class="container mx-auto h-14 text-white flex flex-nowrap justify-between items-center px-4"
+      class="
+        container
+        mx-auto
+        h-14
+        text-white
+        flex flex-nowrap
+        justify-between
+        items-center
+        px-4
+      "
     >
       <a
         class="phone text-lg h-full flex items-center hover:underline"
@@ -40,14 +49,14 @@ export default Vue.extend({
     return {
       phoneNumber: data.contact_phone_number,
       isShowMenuToggle: false,
-      buttonState: false
+      buttonState: false,
     };
   },
   computed: {
     ...mapGetters(["isShowHeader"]),
     formatedPhoneNumber(): string {
       return this.phoneNumber.split("").reduce(this.formatNumber, "");
-    }
+    },
   },
   methods: {
     changeViewMenuToggle(state: boolean) {
@@ -57,8 +66,8 @@ export default Vue.extend({
     formatNumber(word: string, letter: string, index: number) {
       if (index % 3) return word + letter;
       return word + (letter + " ");
-    }
-  }
+    },
+  },
 });
 </script>
 

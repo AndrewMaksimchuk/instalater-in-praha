@@ -35,7 +35,17 @@
         />
 
         <button
-          class="bg-blue-500 text-white uppercase p-2 mt-10 tracking-wide border rounded-md hover:underline"
+          class="
+            bg-blue-500
+            text-white
+            uppercase
+            p-2
+            mt-10
+            tracking-wide
+            border
+            rounded-md
+            hover:underline
+          "
           type="submit"
         >
           {{ $t("callback_from_button") }}
@@ -52,8 +62,8 @@ export default Vue.extend({
   props: {
     isHeaderShow: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
   data() {
     return {
@@ -64,7 +74,7 @@ export default Vue.extend({
       // namePlaceholder: "Andrew Maksimchuk",
       // phoneNumberPlaceholder: "+380934705418"
     };
-  }
+  },
 });
 </script>
 

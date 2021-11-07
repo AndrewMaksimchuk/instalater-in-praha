@@ -15,8 +15,8 @@ export default Vue.extend({
   computed: {
     availableLocales() {
       // @ts-ignore
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale);
-    }
-  }
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+    },
+  },
 });
 </script>

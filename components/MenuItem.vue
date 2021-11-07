@@ -13,17 +13,17 @@ export default Vue.extend({
   props: {
     index: {
       type: Number,
-      required: true
+      required: true,
     },
     link: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     press() {
       this.$emit("changeViewMenuToggle", false);
-    }
-  }
+    },
+  },
 });
 </script>

@@ -21,12 +21,12 @@ export default Vue.extend({
   props: {
     imgSrc: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
-    ...mapMutations(["showModalWindow"])
-  }
+    ...mapMutations(["showModalWindow"]),
+  },
 });
 </script>
 

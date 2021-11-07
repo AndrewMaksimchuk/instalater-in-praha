@@ -1,6 +1,17 @@
 <template>
   <div
-    class="menu-toggle p-4 absolute left-0 top-14 w-full bg-gray-900 flex flex-col justify-between text-gray-50"
+    class="
+      menu-toggle
+      p-4
+      absolute
+      left-0
+      top-14
+      w-full
+      bg-gray-900
+      flex flex-col
+      justify-between
+      text-gray-50
+    "
     :class="{ hidden: !isShow }"
   >
     <ul class="h-full flex flex-col gap-4 pt-8">
@@ -50,21 +61,21 @@ export default Vue.extend({
   props: {
     isShow: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       menu: data.menu_links,
       linkFacebook: data.contact_facebook,
-      linkInstagram: data.contact_instagram
+      linkInstagram: data.contact_instagram,
     };
   },
   methods: {
     press(state: boolean) {
       this.$emit("changeViewMenuToggle", state);
-    }
-  }
+    },
+  },
 });
 </script>
 

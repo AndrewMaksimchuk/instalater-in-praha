@@ -65,9 +65,9 @@ export default Vue.extend({
       menu: data.menu_links,
       linkFacebook: data.contact_facebook,
       linkInstagram: data.contact_instagram,
-      linkMainPage: data.site_url
+      linkMainPage: data.site_url,
     };
-  }
+  },
 });
 </script>
 

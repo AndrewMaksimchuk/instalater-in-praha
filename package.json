@@ -12,7 +12,6 @@
     "prepare": "husky install",
     "lint": "prettier --check .",
     "format": "prettier --write ."
-
   },
   "dependencies": {
     "@nuxt/http": "^0.6.4",

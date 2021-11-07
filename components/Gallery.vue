@@ -33,8 +33,8 @@ export default Vue.extend({
   data() {
     return {
       indexTriger: 4,
-      jobPhotos: data.gallery_preview_photos
+      jobPhotos: data.gallery_preview_photos,
     };
-  }
+  },
 });
 </script>

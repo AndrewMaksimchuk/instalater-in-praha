@@ -7,7 +7,16 @@
     />
     <figcaption class="absolute bottom-36 w-full text-center">
       <strong
-        class="bg-blue-500 text-white rounded-md px-4 py-2 uppercase tracking-wider text-lg"
+        class="
+          bg-blue-500
+          text-white
+          rounded-md
+          px-4
+          py-2
+          uppercase
+          tracking-wider
+          text-lg
+        "
       >
         {{ $t(`slider[${index}]`) }}
       </strong>
@@ -22,13 +31,13 @@ export default Vue.extend({
   props: {
     index: {
       type: Number,
-      default: 0
+      default: 0,
     },
     imgSrc: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 });
 </script>
 

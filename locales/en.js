@@ -93,7 +93,7 @@ export default {
     "Bath installation",
     "Gas heating at home",
     "Installation of a toilet bowl installation",
-    "Control readings of water meters"
+    "Control readings of water meters",
   ],
   jobs_comment: "And much more...",
   gallery_header_text: "Gallery of completed works",
@@ -105,5 +105,5 @@ export default {
   callback_from_button: "Send",
   callback_from_name_placeholder: "Andrew Maksimchuk",
   callback_from_phone_number_placeholder: "+380934705418",
-  modal_window_close_button: "Close"
+  modal_window_close_button: "Close",
 };

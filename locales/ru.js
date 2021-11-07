@@ -94,7 +94,7 @@ export default {
     "Установка ванны",
     "Газовое отопление дома",
     "Установка инсталляции унитаза",
-    "Контрольные показания счетчиков воды"
+    "Контрольные показания счетчиков воды",
   ],
   jobs_comment: "И многое другое...",
   gallery_header_text: "Галерея выполненных работ",
@@ -106,5 +106,5 @@ export default {
   callback_from_button: "Отправить",
   callback_from_name_placeholder: "Andrew Maksimchuk",
   callback_from_phone_number_placeholder: "+380934705418",
-  modal_window_close_button: "Закрыть"
+  modal_window_close_button: "Закрыть",
 };

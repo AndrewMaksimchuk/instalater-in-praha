@@ -28,8 +28,8 @@ export default Vue.extend({
   components: { LangSelected },
   data() {
     return {
-      menu: data.menu_links
+      menu: data.menu_links,
     };
-  }
+  },
 });
 </script>

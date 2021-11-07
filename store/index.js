@@ -1,7 +1,7 @@
 export const state = () => ({
   isShowHeader: true,
   isShowModalWindow: false,
-  imgInModal: null
+  imgInModal: null,
 });
 
 export const mutations = {
@@ -19,11 +19,11 @@ export const mutations = {
   },
   hideHeader(state) {
     state.isShowHeader = false;
-  }
+  },
 };
 
 export const getters = {
-  isShowHeader: state => state.isShowHeader,
-  isShowModalWindow: state => state.isShowModalWindow,
-  imgInModal: state => state.imgInModal
+  isShowHeader: (state) => state.isShowHeader,
+  isShowModalWindow: (state) => state.isShowModalWindow,
+  imgInModal: (state) => state.imgInModal,
 };
