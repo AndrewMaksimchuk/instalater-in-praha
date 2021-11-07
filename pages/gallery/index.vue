@@ -8,23 +8,6 @@
     </h2>
     <section class="h-auto flex flex-wrap justify-evenly gap-4">
       <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
-      <GalleryCard />
     </section>
     <CallbackForm />
   </main>
@@ -40,8 +23,10 @@ export default Vue.extend({
     };
   },
   async created() {
-    const res = await this.$http.$get("https://unpkg.com/nuxt/package.json");
-    this.images = await res.json();
+    //@ts-ignore
+    // TODO: make request to get all list of all images
+    // const res = await this.$http.get("https://unpkg.com/nuxt/package.json");
+    // this.images = await res.json();
   },
 });
 </script>
