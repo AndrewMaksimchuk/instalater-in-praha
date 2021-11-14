@@ -19,6 +19,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import {site_url} from '../../data.json'
 
 export default Vue.extend({
   data() {
@@ -27,7 +28,7 @@ export default Vue.extend({
     };
   },
   async created() {
-    const url = `${window.location.origin}/api/images/gallery/`;
+    const url = `http://${site_url}/api/images/gallery/`;
     const res = await this.$http.get(url);
     this.images = await res.json();
   },

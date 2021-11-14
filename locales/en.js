@@ -109,7 +109,7 @@ export default {
   callback_from_name: "Enter your name",
   callback_from_phone_number: "Enter your phone number",
   callback_from_button: "Send",
-  callback_from_name_placeholder: "Andrew Maksimchuk",
-  callback_from_phone_number_placeholder: "+380934705418",
+  callback_from_name_placeholder: "Robert Rathbun",
+  callback_from_phone_number_placeholder: "+420774868158",
   modal_window_close_button: "Close",
 };

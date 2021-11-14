@@ -34,7 +34,7 @@
     </button>
     <img
       class="w-4/5 h-4/6 object-cover xl:object-contain"
-      :src="`images/gallery/${imgInModal}`"
+      :src="`/images/gallery/${imgInModal}`"
       alt=""
     />
   </div>

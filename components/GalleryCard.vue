@@ -5,7 +5,7 @@
   >
     <img
       class="rounded-md w-full h-full object-cover"
-      :src="`images/gallery/${imgSrc}`"
+      :src="`/images/gallery/${imgSrc}`"
       loading="lazy"
       alt="Images of work"
       @click="showModalWindow(imgSrc)"

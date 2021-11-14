@@ -20,7 +20,7 @@
       {{ $t("gallery_description") }}
     </p>
     <p class="text-center text-gray-700">
-      <a class="underline" href="/gallery">{{ $t("gallery_link_to_full") }}</a>
+      <nuxt-link class="underline" to="/gallery">{{ $t("gallery_link_to_full") }}</nuxt-link>
     </p>
   </section>
 </template>

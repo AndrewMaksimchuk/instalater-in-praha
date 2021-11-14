@@ -104,7 +104,7 @@ export default {
   callback_from_name: "Zadejte své jméno",
   callback_from_phone_number: "Vložte své telefonní číslo",
   callback_from_button: "Poslat",
-  callback_from_name_placeholder: "Andrew Maksimchuk",
-  callback_from_phone_number_placeholder: "+380934705418",
+  callback_from_name_placeholder: "František Běhounek",
+  callback_from_phone_number_placeholder: "+420774868158",
   modal_window_close_button: "Zavřít",
 };

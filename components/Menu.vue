@@ -9,13 +9,13 @@
       />
     </ul>
     <LangSelected />
-    <a href="/">
+    <nuxt-link to="/">
       <img
         class="w-11 h-auto ml-8"
         src="~/assets/images/icons/logo.white.png"
         alt="Company logo"
         aria-hidden="true"
-    /></a>
+    /></nuxt-link>
   </div>
 </template>
 

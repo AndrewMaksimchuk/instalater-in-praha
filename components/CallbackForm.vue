@@ -67,14 +67,14 @@ export default Vue.extend({
   },
   data() {
     return {
-      // headerText: "Мы вам перезвоним",
-      // name: "Укажите ваше имья",
-      // phoneNumber: "Укажите ваш номер телефона",
-      // button: "Отправить",
-      // namePlaceholder: "Andrew Maksimchuk",
-      // phoneNumberPlaceholder: "+380934705418"
+      
     };
   },
+  methods: {
+    submit() {
+      // this.$http.post();
+    }
+  }
 });
 </script>
 

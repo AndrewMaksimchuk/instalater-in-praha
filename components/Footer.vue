@@ -39,16 +39,16 @@
             <span class="pl-1.5 text-3xl">Facebook</span>
           </a>
         </section>
-        <a class="flex gap-4 hover:underline" :href="linkMainPage">
+        <nuxt-link class="flex gap-4 hover:underline" to="/">
           <span class="text-3xl">
             {{ name }}
           </span>
           <img
-            class="w-11 h-auto"
+            class="w-11 h-auto object-contain"
             src="~/assets/images/icons/logo.white.png"
             alt="Company logo"
           />
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </footer>
@@ -65,7 +65,6 @@ export default Vue.extend({
       menu: data.menu_links,
       linkFacebook: data.contact_facebook,
       linkInstagram: data.contact_instagram,
-      linkMainPage: data.site_url,
     };
   },
 });

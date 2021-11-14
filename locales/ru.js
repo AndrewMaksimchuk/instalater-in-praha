@@ -107,10 +107,10 @@ export default {
   gallery_description: "Хотите увидить больше?",
   gallery_link_to_full: "Посмотрите все примеры здесь",
   callback_from_header_text: "Мы вам перезвоним",
-  callback_from_name: "Укажите ваше имья",
+  callback_from_name: "Укажите ваше имя",
   callback_from_phone_number: "Укажите ваш номер телефона",
   callback_from_button: "Отправить",
-  callback_from_name_placeholder: "Andrew Maksimchuk",
-  callback_from_phone_number_placeholder: "+380934705418",
+  callback_from_name_placeholder: "Олег Константинович",
+  callback_from_phone_number_placeholder: "+420774868158",
   modal_window_close_button: "Закрыть",
 };
